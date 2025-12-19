@@ -17,6 +17,16 @@ if (hamburger && navMenu) {
         });
     });
 
+    // Close menu button
+    const menuClose = document.getElementById('menuClose');
+    if (menuClose) {
+        menuClose.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (navMenu.classList.contains('active') && 
