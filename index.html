@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Özgür Sanat Akademi - Özgür Tuğçe Ağ tarafından kurulan, sanatla büyüyen, disiplinle gelişen bir eğitim anlayışı">
+    <title>Özgür Sanat Akademi - Sanatla Büyüyen, Disiplinle Gelişen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo-wrapper">
+                <svg class="progress-ring" width="140" height="140" viewBox="0 0 140 140">
+                    <defs>
+                        <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6B2C3E;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#2D5016;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="progress-ring-circle-bg" cx="70" cy="70" r="65" fill="none" stroke="#E8E5DE" stroke-width="4"/>
+                    <circle class="progress-ring-circle" cx="70" cy="70" r="65" fill="none" stroke="url(#progressGradient)" stroke-width="4" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                </svg>
+                <img src="images/Ekran Resmi 2025-12-17 01.20.09.png" alt="Özgür Sanat Akademi" class="loading-logo">
+            </div>
+            <div class="loading-text">
+                <h2>Özgür Sanat Akademi</h2>
+                <span class="loading-tagline">Müzik & Sanat Eğitimi</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#anasayfa" class="nav-link">Ana Sayfa</a></li>
+                    <li><a href="#hakkimizda" class="nav-link">Hakkımızda</a></li>
+                    <li><a href="#dersler" class="nav-link">Dersler</a></li>
+                    <li><a href="#egitim-anlayisi" class="nav-link">Eğitim Anlayışı</a></li>
+                    <li><a href="#galeri" class="nav-link">Galeri</a></li>
+                    <li><a href="#iletisim" class="nav-link">İletişim</a></li>
+                </ul>
+                <div class="logo">
+                    <img src="images/Ekran Resmi 2025-12-17 01.20.09.png" alt="Özgür Sanat Akademi Logo" class="logo-image">
+                    <div class="logo-text">
+                        <h1>Özgür Sanat Akademi</h1>
+                        <span class="logo-tagline">Müzik & Sanat Eğitimi</span>
+                    </div>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="anasayfa" class="hero">
+        <div class="hero-background" style="background-image: url('images/Ekran Resmi 2025-12-17 01.20.09.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Özgür Sanat Akademi</h1>
+                <p class="hero-subtitle">Sanatla büyüyen, disiplinle gelişen bir eğitim anlayışı</p>
+                <a href="#dersler" class="btn btn-primary">Derslerimizi Keşfet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section / Kurucu Hoca -->
+    <section id="hakkimizda" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>🎼 Özgür Tuğçe Ağ</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="portrait-wrapper">
+                        <img src="images/Ekran Resmi 2025-12-16 17.11.05.png" alt="Özgür Tuğçe Ağ" class="portrait-img">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="biography">
+                        <p>2018'de Trabzon'da Prof. Dr. Nazım Bağırov'un Öğrencileri Öğr.Gör. İsmail Erarslan ile işitme, Öğr.Gör.Dr. Serap Ceman Ustasüleyman ile piyano çalıştı.</p>
+                        <p>2019'da Öğr.Gör.Dr. Özlem Aydın ile Lied ve Aryalar üzerine çalıştı.</p>
+                        <p>2019-2020 yılları arasında TRT Korosunda koristlik yaptı. Aynı yıllarda Karadeniz Korosu olarak bilinen Olimbera Voice Korosunda koristlik yaptı.</p>
+                        <p>Aynı yıl Ankara Devlet Opera ve Balesi'nin düzenlediği "Opera" yarışmasında 1.'lik elde etti.</p>
+                        <p>2019'da 100 Ses Koro Okulu kış kampına katıldı; Ahter Destan, Mete Gökçe, Nikolay Merdzanov gibi önemli isimlerle çalıştı ve gençlik korosunda korist oldu.</p>
+                        <p>Koroda opera eğitmeni Ivayla Hinkova Bobcheva ile ses eğitimi çalıştı.</p>
+                        <p>2020 yılında Gazi Üniversitesi'nde;</p>
+                        <ul>
+                            <li>Prof. Dr. Erdal Tuğcular,</li>
+                            <li>Prof. Dr. Ferda Gürgan Öztürk,</li>
+                            <li>Prof. Dr. Ömer Türkmenoğlu,</li>
+                            <li>Prof. Dr. Barış Karaelma,</li>
+                            <li>Prof. Dr. Neşe Can,</li>
+                            <li>Doç. Dr. İlknur Özal Göncü</li>
+                        </ul>
+                        <p>gibi alanında uzman akademisyenlerle çalıştı.</p>
+                        <p class="highlight">Gazi Üniversitesi Müzik Eğitimi Anabilim Dalı mezunudur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="dersler" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Verilen Dersler</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('images/2035_anaf_5_3774c814955740568b5fd2d68d76e451.jpg');">
+                        <div class="course-overlay"></div>
+                    </div>
+                    <div class="course-icon">🎤</div>
+                    <div class="course-content">
+                        <h3>Ses (Şan)</h3>
+                        <p>Profesyonel ses eğitimi ve şan teknikleri ile sesinizi keşfedin ve geliştirin.</p>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('images/piano.jpg');">
+                        <div class="course-overlay"></div>
+                    </div>
+                    <div class="course-icon">🎹</div>
+                    <div class="course-content">
+                        <h3>Piyano</h3>
+                        <p>Klasikten moderne, her seviyeye uygun piyano eğitimi ile müzik dünyasına adım atın.</p>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('images/gitar-nedir-hakkinda-25.webp');">
+                        <div class="course-overlay"></div>
+                    </div>
+                    <div class="course-icon">🎸</div>
+                    <div class="course-content">
+                        <h3>Gitar</h3>
+                        <p>Klasik, akustik ve elektro gitar eğitimleri ile enstrümanınızı çalmayı öğrenin.</p>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('images/bag-lama-tu-rleri-724x394.webp');">
+                        <div class="course-overlay"></div>
+                    </div>
+                    <div class="course-icon">🎵</div>
+                    <div class="course-content">
+                        <h3>Bağlama</h3>
+                        <p>Geleneksel Türk müziği enstrümanı bağlama ile kültürel mirasımızı yaşatın.</p>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('images/cemgulgel-1742194275.webp');">
+                        <div class="course-overlay"></div>
+                    </div>
+                    <div class="course-icon">🎻</div>
+                    <div class="course-content">
+                        <h3>Keman</h3>
+                        <p>Klasik müzik enstrümanı keman ile zarif ve duygusal müzik yapın.</p>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('images/Ekran Resmi 2025-12-16 17.11.05.png');">
+                        <div class="course-overlay"></div>
+                    </div>
+                    <div class="course-icon">🎓</div>
+                    <div class="course-content">
+                        <h3>Güzel Sanatlar Liseleri & Konservatuvar Yetenek Sınavlarına Hazırlık</h3>
+                        <p>Güzel Sanatlar Liseleri ve Konservatuvar yetenek sınavlarına özel hazırlık kursları.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Philosophy Section -->
+    <section id="egitim-anlayisi" class="philosophy">
+        <div class="container">
+            <div class="section-header">
+                <h2>Eğitim Anlayışı</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="philosophy-content">
+                <div class="philosophy-item">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Disiplinli ama Özgür</h3>
+                    <p>Eğitimde disiplinli bir yaklaşım benimserken, öğrencilerin sanatsal özgürlüğünü destekliyoruz.</p>
+                </div>
+                <div class="philosophy-item">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Sanatsal İfade Öncelikli</h3>
+                    <p>Her öğrencinin kendine özgü sanatsal ifadesini keşfetmesine ve geliştirmesine yardımcı oluyoruz.</p>
+                </div>
+                <div class="philosophy-item">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Birebir ve Kişiye Özel Eğitim</h3>
+                    <p>Her öğrencinin bireysel ihtiyaçlarına uygun, özelleştirilmiş bir eğitim yaklaşımı benimseriz.</p>
+                </div>
+                <div class="philosophy-item">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Akademik Temelli Yaklaşım</h3>
+                    <p>Eğitim programlarımız akademik standartlara uygun, bilimsel temellere dayanmaktadır.</p>
+                </div>
+                <div class="philosophy-item">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Küçük Gruplarda Öğrenme</h3>
+                    <p>Öğrencilerimiz küçük gruplar halinde eğitim alarak daha fazla ilgi ve özen görür.</p>
+                </div>
+                <div class="philosophy-item">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Başarı Odaklı Eğitim</h3>
+                    <p>Her öğrencinin başarısını destekleyen, hedef odaklı bir eğitim sistemi sunuyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeri" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Galeri</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-image="images/Ekran Resmi 2025-12-16 17.11.05.png">
+                    <img src="images/Ekran Resmi 2025-12-16 17.11.05.png" alt="Galeri Görseli">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-image="images/WhatsApp Image 2025-12-17 at 02.22.50.jpeg">
+                    <img src="images/WhatsApp Image 2025-12-17 at 02.22.50.jpeg" alt="Galeri Görseli">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-image="images/WhatsApp Image 2025-12-17 at 02.22.55.jpeg">
+                    <img src="images/WhatsApp Image 2025-12-17 at 02.22.55.jpeg" alt="Galeri Görseli">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-prev">&#10094;</span>
+        <span class="lightbox-next">&#10095;</span>
+        <img class="lightbox-image" src="" alt="Lightbox Görsel">
+    </div>
+
+    <!-- Contact Section -->
+    <section id="iletisim" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>İletişim</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>WhatsApp</h3>
+                            <p>Hemen mesaj gönderin</p>
+                            <a href="https://wa.me/905442729968" target="_blank" class="btn btn-contact">WhatsApp ile İletişim</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Telefon</h3>
+                            <p>0544 272 99 68</p>
+                            <a href="tel:+905442729968" class="btn btn-contact">Hemen Ara</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Instagram</h3>
+                            <p>@ozgursanatakademi</p>
+                            <a href="https://instagram.com/ozgursanatakademi" target="_blank" class="btn btn-contact">Instagram'ı Ziyaret Et</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.746062866318!2d32.8597!3d41.0082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAwJzI5LjUiTiAzMsKwNTEnMzQuOSJF!5e0!3m2!1str!2str!4v1234567890123!5m2!1str!2str" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; border-radius: 15px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-header">
+                <h3>Özgür Sanat Akademi</h3>
+                <p>Sanatla büyüyen, disiplinle gelişen bir eğitim anlayışı</p>
+            </div>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Hızlı Menü</h4>
+                    <ul>
+                        <li><a href="#anasayfa">Ana Sayfa</a></li>
+                        <li><a href="#hakkimizda">Hakkımızda</a></li>
+                        <li><a href="#dersler">Dersler</a></li>
+                        <li><a href="#egitim-anlayisi">Eğitim Anlayışı</a></li>
+                        <li><a href="#galeri">Galeri</a></li>
+                        <li><a href="#iletisim">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Sosyal Medya</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/ozgursanatakademi" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/905442729968" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Özgür Sanat Akademi – Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
