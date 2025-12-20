@@ -23,6 +23,9 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 body {
@@ -31,10 +34,16 @@ body {
     color: var(--text-dark);
     background-color: var(--light-beige);
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
 }
 
 body.loading {
     overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
 
 /* Loading Screen */
@@ -44,6 +53,8 @@ body.loading {
     left: 0;
     width: 100%;
     height: 100%;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     background: linear-gradient(135deg, var(--cream) 0%, var(--light-beige) 50%, var(--pastel-gray) 100%);
     display: flex;
     align-items: center;
@@ -52,16 +63,24 @@ body.loading {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.6s ease, visibility 0.6s ease;
+    overflow: hidden;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .loading-screen.hidden {
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
 }
 
 .loading-content {
     text-align: center;
     animation: fadeInUp 0.8s ease;
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .loading-logo-wrapper {
@@ -151,6 +170,8 @@ body.loading {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Navigation */
@@ -165,6 +186,9 @@ body.loading {
     box-shadow: 0 2px 20px rgba(45, 80, 22, 0.06);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border-bottom: 1px solid rgba(232, 229, 222, 0.5);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .navbar.scrolled {
@@ -179,7 +203,6 @@ body.loading {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    flex-direction: row-reverse;
 }
 
 .logo {
@@ -247,6 +270,10 @@ body.loading {
     position: relative;
 }
 
+.nav-menu .menu-header {
+    display: none;
+}
+
 .nav-menu .nav-link {
     text-decoration: none;
     color: var(--text-dark);
@@ -309,6 +336,10 @@ body.loading {
 
 .nav-menu .nav-link.active::after {
     width: 60%;
+}
+
+.nav-menu .nav-link i {
+    display: none;
 }
 
 .nav-cta {
@@ -402,8 +433,14 @@ body.loading {
     z-index: 2;
     text-align: center;
     max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
     padding: 3rem;
     animation: fadeInUp 1.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-title {
@@ -415,6 +452,8 @@ body.loading {
     line-height: 1.2;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     letter-spacing: -1px;
+    width: 100%;
+    text-align: center;
 }
 
 .hero-subtitle {
@@ -424,6 +463,8 @@ body.loading {
     margin-bottom: 3rem;
     line-height: 1.6;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    text-align: center;
 }
 
 /* Buttons */
@@ -935,6 +976,12 @@ section {
     background: var(--white);
     display: flex;
     align-items: stretch;
+    transition: all 0.3s ease;
+}
+
+.map-container:hover {
+    box-shadow: var(--shadow-strong);
+    transform: translateY(-2px);
 }
 
 .map-container iframe {
@@ -943,6 +990,7 @@ section {
     min-height: 500px;
     border: none;
     display: block;
+    transition: filter 0.3s ease;
 }
 
 /* Footer */
@@ -1145,6 +1193,9 @@ section {
 @media (max-width: 968px) {
     .container {
         padding: 0 30px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .nav-wrapper {
@@ -1189,7 +1240,7 @@ section {
         max-width: 350px;
         height: 100vh;
         text-align: left;
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: -5px 0 30px rgba(45, 80, 22, 0.2);
         padding: 6rem 2rem 2rem;
         gap: 0.3rem;
@@ -1197,10 +1248,14 @@ section {
         overflow-y: auto;
         z-index: 999;
         border-left: 3px solid var(--burgundy);
+        visibility: hidden;
+        opacity: 0;
     }
 
     .nav-menu.active {
         right: 0;
+        visibility: visible;
+        opacity: 1;
     }
 
     .nav-menu::before {
@@ -1213,13 +1268,15 @@ section {
         background: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(2px);
         opacity: 0;
+        visibility: hidden;
         pointer-events: none;
-        transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
         z-index: -1;
     }
 
     .nav-menu.active::before {
         opacity: 1;
+        visibility: visible;
         pointer-events: all;
     }
 
@@ -1228,6 +1285,7 @@ section {
     }
 
     .nav-menu .menu-header {
+        display: block;
         padding: 0;
         margin-bottom: 2rem;
         border-bottom: 2px solid rgba(107, 44, 62, 0.2);
@@ -1287,6 +1345,7 @@ section {
     }
 
     .nav-menu .nav-link i {
+        display: inline-block;
         width: 20px;
         text-align: center;
         color: var(--burgundy);
@@ -1407,19 +1466,28 @@ section {
     }
 
     .loading-screen {
-        padding: 2rem 1rem;
+        padding: 1rem;
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        height: 100%;
+        overflow: hidden;
     }
 
     .loading-content {
         width: 100%;
         max-width: 90vw;
-        padding: 1rem;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .loading-logo-wrapper {
         width: 120px;
         height: 120px;
         margin-bottom: 1.5rem;
+        flex-shrink: 0;
     }
 
     .progress-ring {
@@ -1431,6 +1499,12 @@ section {
         height: 100px;
         width: 100px;
         border-width: 3px;
+        flex-shrink: 0;
+    }
+
+    .loading-text {
+        width: 100%;
+        flex-shrink: 0;
     }
 
     .loading-text h2 {
