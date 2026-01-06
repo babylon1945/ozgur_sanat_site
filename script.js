@@ -261,3 +261,60 @@ document.querySelectorAll('section > .container > *').forEach(el => {
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
+
+// Trial Lesson Form Handler
+const trialForm = document.getElementById('trialForm');
+if (trialForm) {
+    trialForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const formData = {
+            name: document.getElementById('trialName').value.trim(),
+            phone: document.getElementById('trialPhone').value.trim(),
+            course: document.getElementById('trialCourse').value,
+            message: document.getElementById('trialMessage').value.trim()
+        };
+        
+        // Validate form
+        if (!formData.name || !formData.phone || !formData.course) {
+            alert('Lütfen tüm zorunlu alanları doldurun.');
+            return;
+        }
+        
+        // Format phone number (remove spaces, dashes, etc.)
+        const phoneNumber = formData.phone.replace(/\s|-|\(|\)/g, '');
+        
+        // Create WhatsApp message
+        let whatsappMessage = `Merhaba! Ücretsiz tanışma dersi için başvuru yapmak istiyorum.\n\n`;
+        whatsappMessage += `👤 *Ad Soyad:* ${formData.name}\n`;
+        whatsappMessage += `📞 *Telefon:* ${formData.phone}\n`;
+        whatsappMessage += `🎵 *İlgilendiğim Ders:* ${formData.course}\n`;
+        
+        if (formData.message) {
+            whatsappMessage += `\n💬 *Mesajım:*\n${formData.message}`;
+        }
+        
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        
+        // WhatsApp phone number (from contact section)
+        const whatsappPhone = '905442729968';
+        
+        // Open WhatsApp
+        const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${encodedMessage}`;
+        window.open(whatsappUrl, '_blank');
+        
+        // Optional: Show success message
+        const submitButton = trialForm.querySelector('.btn-trial');
+        const originalText = submitButton.innerHTML;
+        submitButton.innerHTML = '<i class="fas fa-check"></i> WhatsApp\'a Yönlendiriliyorsunuz...';
+        submitButton.disabled = true;
+        
+        setTimeout(() => {
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+            // Optionally reset form
+            // trialForm.reset();
+        }, 3000);
+    });
+}

@@ -78,8 +78,11 @@
                 <h1 class="hero-title">Özgür Sanat Müzik Atölyesi</h1>
                 <p class="hero-subtitle">Sanatla büyüyen, disiplinle gelişen bir eğitim anlayışı</p>
                 <div class="hero-buttons">
-                    <a href="#dersler" class="btn btn-primary">Derslerimizi Keşfet</a>
-                    <a href="#iletisim" class="btn btn-secondary">İletişim</a>
+                    <div class="hero-buttons-row">
+                        <a href="#dersler" class="btn btn-secondary">Derslerimizi Keşfet</a>
+                        <a href="#iletisim" class="btn btn-secondary">İletişim</a>
+                    </div>
+                    <a href="#tanisma-dersi" class="btn btn-primary hero-button-center">Ücretsiz Tanışma Dersi</a>
                 </div>
             </div>
         </div>
@@ -190,6 +193,92 @@
                         <h3>Güzel Sanatlar Liseleri & Konservatuvar Yetenek Sınavlarına Hazırlık</h3>
                         <p>Güzel Sanatlar Liseleri ve Konservatuvar yetenek sınavlarına özel hazırlık kursları.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Trial Lesson Section -->
+    <section id="tanisma-dersi" class="trial-lesson">
+        <div class="container">
+            <div class="section-header">
+                <h2>🎁 Ücretsiz Tanışma Dersi</h2>
+                <div class="underline"></div>
+                <p class="section-subtitle">Eğitim anlayışımızı ve derslerimizi yakından tanımak için ücretsiz tanışma dersimize katılın!</p>
+            </div>
+            <div class="trial-content">
+                <div class="trial-info">
+                    <div class="trial-benefits">
+                        <h3>Tanışma Dersinde Neler Var?</h3>
+                        <ul class="benefits-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Eğitim anlayışımızı ve metodlarımızı tanıma fırsatı</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Seviyenize uygun eğitim programı belirleme</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Atölyemizi ve eğitim ortamını görme</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Hedeflerinize uygun ders planı oluşturma</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Sorularınızı sorma ve detaylı bilgi alma</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="trial-cta-box">
+                        <div class="cta-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3>Hemen Ücretsiz Ders Alın!</h3>
+                        <p>Formu doldurun, size en kısa sürede dönüş yapalım ve tanışma dersinizi planlayalım.</p>
+                    </div>
+                </div>
+                <div class="trial-form-wrapper">
+                    <form id="trialForm" class="trial-form">
+                        <div class="form-group">
+                            <label for="trialName">
+                                <i class="fas fa-user"></i> Ad Soyad
+                            </label>
+                            <input type="text" id="trialName" name="name" required placeholder="Adınız ve soyadınız">
+                        </div>
+                        <div class="form-group">
+                            <label for="trialPhone">
+                                <i class="fas fa-phone"></i> Telefon
+                            </label>
+                            <input type="tel" id="trialPhone" name="phone" required placeholder="05XX XXX XX XX">
+                        </div>
+                        <div class="form-group">
+                            <label for="trialCourse">
+                                <i class="fas fa-music"></i> İlgilendiğiniz Ders
+                            </label>
+                            <select id="trialCourse" name="course" required>
+                                <option value="">Ders seçiniz</option>
+                                <option value="Ses (Şan)">Ses (Şan)</option>
+                                <option value="Piyano">Piyano</option>
+                                <option value="Gitar">Gitar</option>
+                                <option value="Bağlama">Bağlama</option>
+                                <option value="Keman">Keman</option>
+                                <option value="Güzel Sanatlar Liseleri & Konservatuvar Hazırlık">Güzel Sanatlar Liseleri & Konservatuvar Hazırlık</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="trialMessage">
+                                <i class="fas fa-comment"></i> Mesajınız (Opsiyonel)
+                            </label>
+                            <textarea id="trialMessage" name="message" rows="4" placeholder="Eklemek istediğiniz bir şey var mı?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-trial">
+                            <i class="fab fa-whatsapp"></i> WhatsApp ile Gönder
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -428,6 +517,7 @@
                         <li><a href="#anasayfa">Ana Sayfa</a></li>
                         <li><a href="#hakkimizda">Hakkımızda</a></li>
                         <li><a href="#dersler">Dersler</a></li>
+                        <li><a href="#tanisma-dersi">Ücretsiz Tanışma Dersi</a></li>
                         <li><a href="#egitim-anlayisi">Eğitim Anlayışı</a></li>
                         <li><a href="#medya">Medya</a></li>
                         <li><a href="#iletisim">İletişim</a></li>

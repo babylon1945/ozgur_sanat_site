@@ -474,10 +474,22 @@ body.loading {
 
 .hero-buttons {
     display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-buttons-row {
+    display: flex;
     gap: 1.5rem;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.hero-button-center {
+    margin-top: 0.5rem;
 }
 
 /* Buttons */
@@ -743,6 +755,254 @@ section {
     color: var(--text-light);
     line-height: 1.8;
     font-size: 0.95rem;
+}
+
+/* Trial Lesson Section */
+.trial-lesson {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-green) 100%);
+    color: var(--white);
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.trial-lesson::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="music" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23music)"/></svg>');
+    opacity: 0.3;
+}
+
+.trial-lesson .section-header {
+    position: relative;
+    z-index: 1;
+}
+
+.trial-lesson .section-header h2 {
+    color: var(--white);
+}
+
+.trial-lesson .section-header .underline {
+    background: var(--white);
+}
+
+.trial-lesson .section-subtitle {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trial-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.trial-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.trial-benefits {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.trial-benefits h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.benefits-list li:last-child {
+    margin-bottom: 0;
+}
+
+.benefits-list li i {
+    color: var(--white);
+    font-size: 1.3rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.trial-cta-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--burgundy);
+    font-size: 2.5rem;
+}
+
+.trial-cta-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.trial-cta-box p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.trial-form-wrapper {
+    background: var(--white);
+    border-radius: 25px;
+    padding: 3rem;
+    box-shadow: var(--shadow-strong);
+}
+
+.trial-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--dark-green);
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-group label i {
+    color: var(--burgundy);
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 1rem 1.2rem;
+    border: 2px solid var(--pastel-gray);
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background: var(--white);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--burgundy);
+    box-shadow: 0 0 0 3px rgba(107, 44, 62, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-trial {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: var(--white);
+    padding: 1.2rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-trial:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+}
+
+.btn-trial i {
+    font-size: 1.3rem;
+}
+
+@media (max-width: 968px) {
+    .trial-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .trial-form-wrapper {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .trial-lesson {
+        padding: 4rem 0;
+    }
+    
+    .trial-benefits,
+    .trial-cta-box {
+        padding: 2rem;
+    }
+    
+    .trial-form-wrapper {
+        padding: 1.5rem;
+    }
 }
 
 /* Philosophy Section */
@@ -1620,7 +1880,14 @@ section {
         width: 100%;
     }
 
-    .hero-buttons .btn {
+    .hero-buttons-row {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .hero-buttons .btn,
+    .hero-buttons-row .btn {
         width: 100%;
         max-width: 300px;
     }
